@@ -1,10 +1,9 @@
-import * as Helpers from '../helpers';
-
 const sceneConfig: Phaser.Scenes.Settings.Config = {
   active: false,
   visible: false,
   key: 'Boot',
 };
+
 
 /**
  * The initial scene that loads all necessary assets to the game and displays a loading bar.
@@ -14,9 +13,17 @@ export class BootScene extends Phaser.Scene {
     super(sceneConfig);
   }
 
+  private getGameWidth = () => {
+    return this.game.scale.width;
+  };
+
+  private getGameHeight = () => {
+    return this.game.scale.height;
+  };
+
   public preload() {
-    const halfWidth = Helpers.getGameWidth() * 0.5;
-    const halfHeight = Helpers.getGameHeight() * 0.5;
+    const halfWidth = this.getGameWidth() * 0.5;
+    const halfHeight = this.getGameHeight() * 0.5;
 
     const progressBarHeight = 100;
     const progressBarWidth = 400;
