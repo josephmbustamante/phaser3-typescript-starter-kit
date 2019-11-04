@@ -1,4 +1,4 @@
-const sceneConfig: Phaser.Scenes.Settings.Config = {
+const sceneConfig: Phaser.Types.Scenes.SettingsConfig = {
   active: false,
   visible: false,
   key: 'Boot',

@@ -1,13 +1,10 @@
 import * as Phaser from 'phaser';
 import Scenes from './scenes';
 
-const gameConfig: GameConfig = {
+const gameConfig: Phaser.Types.Core.GameConfig = {
   title: 'Sample',
 
   type: Phaser.AUTO,
-
-  width: window.innerWidth,
-  height: window.innerHeight,
 
   scene: Scenes,
 
@@ -17,7 +14,10 @@ const gameConfig: GameConfig = {
       debug: true,
     },
   },
-
+  scale: {
+    width:  window.innerWidth,
+    height: window.innerHeight,
+  },
   parent: 'game',
   backgroundColor: '#000000',
 };
@@ -25,5 +25,5 @@ const gameConfig: GameConfig = {
 export const game = new Phaser.Game(gameConfig);
 
 window.addEventListener('resize', () => {
-  game.resize(window.innerWidth, window.innerHeight);
+  game.scale.refresh();
 });

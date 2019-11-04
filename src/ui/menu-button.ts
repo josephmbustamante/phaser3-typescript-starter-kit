@@ -1,6 +1,6 @@
-const buttonRestStyle = {
-  fill: '#FFFFFF',
-};
+const buttonRestStyle: Phaser.Types.GameObjects.Text.TextStyle = {
+  backgroundColor: '#000000',
+}
 
 const buttonHoverStyle = {
   fill: '#7CFC00',
