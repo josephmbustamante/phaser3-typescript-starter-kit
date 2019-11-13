@@ -2991,7 +2991,7 @@ pbkdf2@^3.0.3:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-phaser@^3.16.1:
+phaser@^3.20.1:
   version "3.20.1"
   resolved "https://registry.yarnpkg.com/phaser/-/phaser-3.20.1.tgz#7c9211e59dee58a0a8a6df1fd079cb709646eab7"
   integrity sha512-P4x7zfMHdLKu8aPaADg+zTPNvFRYNHqmNqWZEUGw4WnbXZ/ACK+VR8k/11OzYxckEKBnWsqASDMKG9rzEC1rqg==
@@ -3950,7 +3950,7 @@ typescript-tslint-plugin@^0.3.1:
     mock-require "^3.0.2"
     vscode-languageserver "^5.1.0"
 
-typescript@^3.3.3:
+typescript@^3.7.2:
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.7.2.tgz#27e489b95fa5909445e9fef5ee48d81697ad18fb"
   integrity sha512-ml7V7JfiN2Xwvcer+XAf2csGO1bPBdRbFCkYBczNZggrBZ9c7G3riSUeJmqEU5uOtXNPMhE3n+R4FA/3YOAWOQ==
