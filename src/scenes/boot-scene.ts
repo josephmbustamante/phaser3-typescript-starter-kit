@@ -1,3 +1,5 @@
+import { getGameWidth, getGameHeight } from '../helpers';
+
 const sceneConfig: Phaser.Types.Scenes.SettingsConfig = {
   active: false,
   visible: false,
@@ -13,8 +15,8 @@ export class BootScene extends Phaser.Scene {
   }
 
   public preload() {
-    const halfWidth = this.getGameWidth() * 0.5;
-    const halfHeight = this.getGameHeight() * 0.5;
+    const halfWidth = getGameWidth(this) * 0.5;
+    const halfHeight = getGameHeight(this) * 0.5;
 
     const progressBarHeight = 100;
     const progressBarWidth = 400;
@@ -58,15 +60,8 @@ export class BootScene extends Phaser.Scene {
   private loadAssets() {
     // Load sample assets
 
-    // Source: https://en.wikipedia.org/wiki/Lake_Michigan#/media/File:Lake_Michigan_from_Big_Sable_Point_lighthouse.jpg
-    this.load.image('sample', 'assets/sample.jpg');
+    // Source: Open Game Art
+    this.load.image('man', 'assets/character.png');
   }
 
-  private getGameWidth = () => {
-    return this.game.scale.width;
-  }
-
-  private getGameHeight = () => {
-    return this.game.scale.height;
-  }
 }
