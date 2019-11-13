@@ -1,6 +1,6 @@
 {
   "name": "sample-phaser3-typescript-project",
-  "version": "0.1",
+  "version": "1.0.0",
   "description": "A sample project using Phaser 3 and TypeScript",
   "main": "src/main.ts",
   "author": "Joe Bustamante",
@@ -11,13 +11,13 @@
     "dev": "webpack-dev-server"
   },
   "dependencies": {
-    "phaser": "^3.16.1"
+    "phaser": "^3.20.1"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^4.6.0",
     "ts-loader": "^5.3.3",
     "tslint": "^5.12.1",
-    "typescript": "^3.3.3",
+    "typescript": "^3.7.2",
     "typescript-tslint-plugin": "^0.3.1",
     "webpack": "^4.29.3",
     "webpack-cli": "^3.2.3",
