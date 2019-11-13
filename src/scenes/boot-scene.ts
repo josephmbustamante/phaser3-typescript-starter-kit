@@ -1,9 +1,8 @@
-const sceneConfig: Phaser.Scenes.Settings.Config = {
+const sceneConfig: Phaser.Types.Scenes.SettingsConfig = {
   active: false,
   visible: false,
   key: 'Boot',
 };
-
 
 /**
  * The initial scene that loads all necessary assets to the game and displays a loading bar.
@@ -12,14 +11,6 @@ export class BootScene extends Phaser.Scene {
   constructor() {
     super(sceneConfig);
   }
-
-  private getGameWidth = () => {
-    return this.game.scale.width;
-  };
-
-  private getGameHeight = () => {
-    return this.game.scale.height;
-  };
 
   public preload() {
     const halfWidth = this.getGameWidth() * 0.5;
@@ -69,5 +60,13 @@ export class BootScene extends Phaser.Scene {
 
     // Source: https://en.wikipedia.org/wiki/Lake_Michigan#/media/File:Lake_Michigan_from_Big_Sable_Point_lighthouse.jpg
     this.load.image('sample', 'assets/sample.jpg');
+  }
+
+  private getGameWidth = () => {
+    return this.game.scale.width;
+  }
+
+  private getGameHeight = () => {
+    return this.game.scale.height;
   }
 }

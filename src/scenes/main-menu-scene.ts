@@ -1,6 +1,6 @@
 import { MenuButton } from '../ui/menu-button';
 
-const sceneConfig: Phaser.Scenes.Settings.Config = {
+const sceneConfig: Phaser.Types.Scenes.SettingsConfig = {
   active: false,
   visible: false,
   key: 'MainMenu',
@@ -15,11 +15,14 @@ export class MainMenuScene extends Phaser.Scene {
   }
 
   public create() {
-    this.add.text(100, 50, 'Sample', { fill: '#FFFFFF' }).setFontSize(24);
+    this.add.text(100, 50, 'Sample Main Menu', { fill: '#FFFFFF' }).setFontSize(24);
+
     new MenuButton(this, 100, 150, 'Start Game', () => {
       this.scene.start('Game');
     });
-    new MenuButton(this, 100, 200, 'Settings', () => console.log('settings button clicked'));
-    new MenuButton(this, 100, 250, 'Help', () => console.log('help button clicked'));
+
+    new MenuButton(this, 100, 250, 'Settings', () => console.log('settings button clicked'));
+
+    new MenuButton(this, 100, 350, 'Help', () => console.log('help button clicked'));
   }
 }
