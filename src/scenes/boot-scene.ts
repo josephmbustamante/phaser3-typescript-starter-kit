@@ -14,15 +14,27 @@ export class BootScene extends Phaser.Scene {
     super(sceneConfig);
   }
 
-  public preload() {
+  public preload(): void {
     const halfWidth = getGameWidth(this) * 0.5;
     const halfHeight = getGameHeight(this) * 0.5;
 
     const progressBarHeight = 100;
     const progressBarWidth = 400;
 
-    const progressBarContainer = this.add.rectangle(halfWidth, halfHeight, progressBarWidth, progressBarHeight, 0x000000);
-    const progressBar = this.add.rectangle(halfWidth + 20 - progressBarContainer.width * 0.5, halfHeight, 10, progressBarHeight - 20, 0x888888);
+    const progressBarContainer = this.add.rectangle(
+      halfWidth,
+      halfHeight,
+      progressBarWidth,
+      progressBarHeight,
+      0x000000,
+    );
+    const progressBar = this.add.rectangle(
+      halfWidth + 20 - progressBarContainer.width * 0.5,
+      halfHeight,
+      10,
+      progressBarHeight - 20,
+      0x888888,
+    );
 
     const loadingText = this.add.text(halfWidth - 75, halfHeight - 100, 'Loading...').setFontSize(24);
     const percentText = this.add.text(halfWidth - 25, halfHeight, '0%').setFontSize(24);
@@ -61,7 +73,6 @@ export class BootScene extends Phaser.Scene {
     // Load sample assets
 
     // Source: Open Game Art
-    this.load.image('man', 'assets/character.png');
+    this.load.image('man', 'assets/sprites/character.png');
   }
-
 }

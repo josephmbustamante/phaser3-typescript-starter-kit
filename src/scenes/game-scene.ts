@@ -8,8 +8,7 @@ const sceneConfig: Phaser.Types.Scenes.SettingsConfig = {
 };
 
 export class GameScene extends Phaser.Scene {
-
-  public speed: number = 200;
+  public speed = 200;
 
   private cursorKeys: Phaser.Types.Input.Keyboard.CursorKeys;
   private image: Phaser.Physics.Arcade.Sprite;
@@ -18,7 +17,7 @@ export class GameScene extends Phaser.Scene {
     super(sceneConfig);
   }
 
-  public create() {
+  public create(): void {
     // Add a player sprite that can be moved around. Place him in the middle of the screen.
     this.image = this.physics.add.sprite(getGameWidth(this) / 2, getGameHeight(this) / 2, 'man');
 
@@ -26,7 +25,7 @@ export class GameScene extends Phaser.Scene {
     this.cursorKeys = this.input.keyboard.createCursorKeys();
   }
 
-  public update() {
+  public update(): void {
     // Every frame, we create a new velocity for the sprite based on what keys the player is holding down.
     const velocity = new Phaser.Math.Vector2(0, 0);
 
