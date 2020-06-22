@@ -1,14 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "sourceMap": true,
-    "plugins": [
-      {
-        "name": "typescript-tslint-plugin",
-        "alwaysShowRuleFailuresAsWarnings": false,
-        "ignoreDefinitionFiles": false,
-      }
-    ]
+    "sourceMap": true
   },
   "include": [
     "**/*.ts"
