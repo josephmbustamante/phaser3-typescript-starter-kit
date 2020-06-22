@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 const webpack = require('webpack');
 const CopyPlugin = require('copy-webpack-plugin');
@@ -33,6 +34,7 @@ module.exports = {
 
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
+    writeToDisk: true,
     open: true,
   },
 
@@ -40,12 +42,10 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: path.resolve('index.html'),
-          to: path.resolve(__dirname, 'dist'),
+          from: 'index.html',
         },
         {
-          from: path.resolve(__dirname, 'assets'),
-          to: path.resolve(__dirname, 'dist', 'assets'),
+          from: 'assets/**/*',
         },
       ],
     }),
