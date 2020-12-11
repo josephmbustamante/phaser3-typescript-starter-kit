@@ -34,8 +34,11 @@ I make lots of game development tutorials on YouTube, mostly in the Godot engine
 I also post devlogs for the games I'm making. I usually post multiple videos a week.
 
 [You can find my channel here.](https://www.youtube.com/channel/UCLzFt-NdfCm8WFKTyqD0yJw)
- 
 
+## Support my Work
+
+If you've found this starter kit helpful and want to support my work and tutorials, [please consider buying me a coffee.](https://www.buymeacoffee.com/jmbiv)
+ 
 ## Further Reading
 
 The [official Phaser documentation](https://phaser.io/learn) has lots of great tutorials, and the [Phaser Labs page](https://labs.phaser.io/) is full of great examples of using any aspect of Phaser.
