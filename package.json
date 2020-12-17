@@ -7,9 +7,12 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "webpack",
-    "lint": "eslint src",
-    "dev": "webpack-dev-server"
+    "build": "yarn build:dev",
+    "build:dev": "NODE_ENV=development webpack",
+    "build:prod": "NODE_ENV=production webpack",
+    "dev": "NODE_ENV=development webpack-dev-server",
+    "prod": "NODE_ENV=production webpack-dev-server",
+    "lint": "eslint src"
   },
   "dependencies": {
     "phaser": "^3.50.0"

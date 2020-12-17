@@ -19,8 +19,6 @@ module.exports = {
     ],
   },
 
-  devtool: 'inline-source-map',
-
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
   },
@@ -30,7 +28,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
 
-  mode: 'development',
+  mode: process.env.NODE_ENV == 'production' ? 'production' : 'development',
 
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
@@ -62,6 +60,7 @@ module.exports = {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
           chunks: 'all',
+          filename: '[name].app.bundle.js',
         },
       },
     },
