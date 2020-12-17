@@ -17,7 +17,7 @@ export class MainMenuScene extends Phaser.Scene {
   public create(): void {
     this.add
       .text(100, 50, 'This is a sample main menu. Click the "Start" button below to run your game.', {
-        backgroundColor: '#FFFFFF',
+        color: '#FFFFFF',
       })
       .setFontSize(24);
 
