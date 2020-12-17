@@ -5,7 +5,9 @@ This repository contains all the code necessary to start making a game in Phaser
 The code contained here is an expansion of what is created in [this blog post that I wrote.](https://spin.atomicobject.com/2019/07/13/phaser-3-typescript-tutorial/)
 This repository contains all the code that I go through in that tutorial, plus some additional things to help get your game off the ground. Notably, besides a loading screen and main menu screen, an example sprite is included that can be moved around with the arrow keys.
 
-**Update:** The starter kit has been updated to work with Phaser 3.23 and TypeScript 3.7.
+#### Latest Changes 
+
+The starter kit has been updated to work with Phaser 3.50 and TypeScript 4.1. Additionally, the webpack config has been changed to look at the `NODE_ENV` environment variable, and either do a production or development build depending on what is provided. You can use `yarn dev` to run the server in dev mode, whcih gives better debugging assistance and faster compile times, or `yarn prod` to run in production, which gives much smaller bundles but takes longer to compile.
 
 ## How to Use
 
@@ -14,6 +16,8 @@ You should be able to clone this repository and run `yarn install` to get any of
 Once you're done installing, simply run `yarn dev` and the game should begin to run. You'll have to open an internet browser and go to the port that the game is running on (usually `localhost:8080` by default).
 
 The game opens up to a main menu. Only the "Start Game" button does anything - the other two are placeholders. If you click "Start Game", you'll be taken to a black screen with a small sprite. You can move the sprite with the arrow keys. This starter kit is far from feature complete, but it's meant to take away the boilerplate that can come with getting a Phaser 3 + TypeScript project up-and-running.
+
+Running `yarn dev` runs the game in development mode, which produces larger bundle sizes but compiles faster and provides better debug support. If you desire a smaller game bundle or to host your game on a server, you can use `yarn build:prod` to compile the project into an optimized bundle. You can use `yarn prod` to run your game locally with production compilation, but this will cause your hot reloading to take longer.
 
 ## Extensions
 
